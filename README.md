@@ -35,13 +35,13 @@ This is an interview task for similarweb.
 
 ## If I had more time I will probably do
 
-- environments (development, staging, production), with "dotenv" & ".env file" etc...
-- the system is small, bigger system will require other files structure.
-- implement locking, in case more then one client try to change (add/remove) video.
+- Environments (development, staging, production), with "dotenv" & ".env file" etc...
+- The system is small, bigger system will require other files structure.
+- Implement locking, in case more then one client try to change (add/remove) video.
 - I choose redis, but if the data increased or need to be more "presistned" will connect to database.
-- centralize all the string in the backend/frontend, and use constants in the code.
-- add more unit test to the vue app, and to the backend side.
-- i'm not disconnecting from redis or the websocket since we only on this page. but in a bigger app it's needed.
-- some data should pulled in runtime from a "secret manager" external service, in this app it's hard-coded (youtube api key for example).
-- add Dockerfiles.
-- probably better looking UI.
+- Centralize all the string in the backend/frontend, and use constants in the code.
+- Add more unit test to the vue app, and to the backend side.
+- I'm not disconnecting from redis or the websocket since we only on this page. but in a bigger app it's needed.
+- Some data should pulled in runtime from a "secret manager" external service, in this app it's hard-coded (youtube api key for example).
+- Add Dockerfiles.
+- Probably better looking UI.
