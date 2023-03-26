@@ -8,20 +8,25 @@ This is an interview task for similarweb.
    ```
    docker run -p 6379:6379 -it redis/redis-stack-server:latest
    ```
-2. Go to backend folder and run the server.
+2. Go to the backend folder install module & run the server.
 
    ```
    cd backend
    ```
-      ```
+   ```
+   npm i
+   ```
+   ```
    npm start
    ```
-3. Next, go to frontend folder and run it.
-
+3. Next, go to the backend folder install module & run the server.
    ```
    cd frontend
    ```
-      ```
+   ```
+   npm i
+   ```
+   ```
    npm run serve
    ```
 
