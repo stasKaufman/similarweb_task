@@ -42,7 +42,8 @@ class YoutubeAPI {
 
   async getVideoInfo(url) {
     try {
-      const videoId = url.split('v=')[1];
+      const params = new URLSearchParams(new URL(url).search);
+      const videoId = params.get("v");
       const response = await this.youtube.videos.list({
         key: this.apiKey,
         part: 'snippet,contentDetails',
