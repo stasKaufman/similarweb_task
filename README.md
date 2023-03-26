@@ -3,12 +3,29 @@
 This is an interview task for similarweb.
 
 ## How to run.
-1. on the main root folder, use docker to run containers (frontend, backend, redis).
+1. First download and run redis container.
 
    ```
-   docker-compose up
+   docker run -p 6379:6379 -it redis/redis-stack-server:latest
    ```
-2. open the broswer and go to: [http://localhost:8080](http://localhost:8080).
+2. Go to backend folder and run the server.
+
+   ```
+   cd backend
+   ```
+      ```
+   npm start
+   ```
+3. Next, go to frontend folder and run it.
+
+   ```
+   cd frontend
+   ```
+      ```
+   npm run serve
+   ```
+
+4. open the broswer and go to: [http://localhost:8080](http://localhost:8080).
 
 ## Short description of what the task includes.
 
@@ -26,5 +43,5 @@ This is an interview task for similarweb.
 - add more unit test to the vue app, and to the backend side.
 - i'm not disconnecting from redis or the websocket since we only on this page. but in a bigger app it's needed.
 - some data should pulled in runtime from a "secret manager" external service, in this app it's hard-coded (youtube api key for example).
-- add "production ready" docker files. current files are for development.
+- add Dockerfiles.
 - probably better looking UI.

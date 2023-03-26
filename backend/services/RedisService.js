@@ -3,9 +3,9 @@ const Redis = require('ioredis');
 class RedisService {
   constructor() {
     // Create three Redis clients for subscriber, publisher, and storage.
-    this.subscriber = new Redis('redis://redis:6379')
-    this.publisher = new Redis('redis://redis:6379')
-    this.storage = new Redis('redis://redis:6379')
+    this.subscriber = new Redis()
+    this.publisher = new Redis()
+    this.storage = new Redis()
   }
 
 

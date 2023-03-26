@@ -35,7 +35,7 @@ const startServer = async () => {
   app.use(bodyParser.json());
   
   // socket api.
-  io.socket.on('connection', (socket) => {
+  io.on('connection', (socket) => {
 
     // add new video.
     try {

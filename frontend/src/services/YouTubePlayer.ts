@@ -22,10 +22,10 @@ class YoutubeVideoPlayer {
 
     this.isVideoPlaying = false;
 
-    this.setEvent();
+    this.setPlayerEvents();
   }
 
-  setEvent() {
+  setPlayerEvents() {
     // if video still playing we wont remove it. just when it finish.
     this.player.on('stateChange', (event: any) => {
       const videoData = event.target.getVideoData();

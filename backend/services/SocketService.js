@@ -7,9 +7,9 @@ class SocketIoService {
 
   // set up a socket connection using an HTTP server.
   setupSocketConnection(httpServer) {
-    this.socket = new Server(httpServer, {
+    this.socket = new Server(httpServer,  {
       cors: {
-        origin: "http://localhost:8080"
+        origin: "http://localhost:8080",
       }
     });
   }
