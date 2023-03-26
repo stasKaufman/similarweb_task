@@ -1,5 +1,6 @@
 import { io, Socket } from 'socket.io-client';
 import { Video } from '@/interfaces/interfaces';
+
 class SocketioService {
   socket: Socket | null;
 
