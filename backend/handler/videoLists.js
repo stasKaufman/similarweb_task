@@ -7,6 +7,7 @@ let getAllVideos = async (req, res, next) => {
         // get updated list from redis and return to the client.
         videos = await redisClient.get('videos');
         videos = JSON.parse(videos);
+        // in case list empty.
         if (!videos) {
             videos = []   
         }

@@ -15,6 +15,10 @@ class YoutubeAPI {
     this.apiKey = apiKey;
   }
 
+  getAPIKey () {
+    return this.apiKey;
+  }
+
   formatDuration(duration) {
     const match = duration.match(/^PT((\d+)H)?((\d+)M)?((\d+)S)?$/);
     if (!match) {
@@ -37,28 +41,24 @@ class YoutubeAPI {
   
 
   async getVideoInfo(url) {
-    if (this.apiKey) {
-        try {
-            const videoId = url.split('v=')[1];
-            const response = await this.youtube.videos.list({
-              key: this.apiKey,
-              part: 'snippet,contentDetails',
-              id: videoId,
-            });
-            try {
-              const video = response.data.items[0];
-              const title = video.snippet.title;
-              const duration = this.formatDuration(video.contentDetails.duration);
-              return { title, duration, videoId };
-            } catch (error) {
-              return new Error(error)
-            }
-          } catch (error) {
-            return new Error(error);
-          }
-    } else {
-        throw new Error('API key is missing.');
-    }
+    try {
+      const videoId = url.split('v=')[1];
+      const response = await this.youtube.videos.list({
+        key: this.apiKey,
+        part: 'snippet,contentDetails',
+        id: videoId,
+      });
+      try {
+        const video = response.data.items[0];
+        const title = video.snippet.title;
+        const duration = this.formatDuration(video.contentDetails.duration);
+        return { title, duration, videoId };
+        } catch (error) {
+          return new Error(error)
+        }
+      } catch (error) {
+        return new Error('Unable to fetch video info from Youtube.', error);
+      }
   }
 }
 
