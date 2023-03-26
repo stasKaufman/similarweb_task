@@ -31,7 +31,7 @@ This is an interview task for similarweb.
 
 - The task include frontend (in vuejs), backend (nodejs) and redis server.
 - The client and the backend talking with websocket so the update will happened immediately.
-- Also, to suppose future scalling of the system I implemented redis sub/pub so if clients connected to more then one server, if update happened ALL clients will be notify.
+- Also, to suppose future scalling of the system I implemented redis sub/pub so if clients connected to more then one server and update happened ALL clients will be notify.
 
 ## If I had more time I will probably do
 
