@@ -19,7 +19,7 @@ This is an interview task for similarweb.
    ```
    npm start
    ```
-3. Next, go to the backend folder install module & run the server.
+3. Next, go to the frontend folder install module & run the server.
    ```
    cd frontend
    ```
